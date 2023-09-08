@@ -9,8 +9,8 @@ interns = {
         "slack_name" : "JealousAide",
         "track": "Backend",
         "utc_time" : datetime.datetime.now(),
-        "github_file_url":"",
-        "github_repo_url":"",
+        "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
+        "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
         "status_code": HTTPStatus.OK.value
     }
 
