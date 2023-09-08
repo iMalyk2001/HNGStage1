@@ -1,17 +1,18 @@
 from fastapi import FastAPI
 from datetime import datetime, timezone
+import datetime
 from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
 
-dt = datetime.now(timezone.utc)
+dt = datetime.datetime.now()
 dt_str = dt.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
         "slack_name" : "JealousAide",
         "current_day" : dt.strftime('%A'),
         "utc_time" : dt_str,
-        "track": "Backend",
+        "track": "backend",
         "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
         "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
         "status_code": HTTPStatus.OK.value
@@ -25,5 +26,5 @@ class DateTimeEncoder(JSONEncoder):
 
 
 @app.get("/api", status_code= 200)
-def intern_ship(slack_name:str="JealousAide", track:str="Backend"):
+def intern_ship(slack_name:str="JealousAide", track:str="backend"):
     return interns
