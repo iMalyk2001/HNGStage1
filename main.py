@@ -1,16 +1,16 @@
 from fastapi import FastAPI
-import calendar
-from datetime import date,datetime
+from datetime import datetime, timezone
 from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
 
-dt = datetime.now()
+dt = datetime.now(timezone.utc)
+dt_str = dt.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
         "slack_name" : "JealousAide",
         "current_day" : dt.strftime('%A'),
-        "utc_time" : dt,
+        "utc_time" : dt_str,
         "track": "Backend",
         "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
         "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
