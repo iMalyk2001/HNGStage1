@@ -1,7 +1,5 @@
-from typing import Optional
 from fastapi import FastAPI
 import datetime
-from pydantic import BaseModel
 from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
