@@ -1,15 +1,17 @@
 from fastapi import FastAPI
-import datetime
+import pytz
+from datetime import datetime
 from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
 
-dt = datetime.datetime.now()
-dt_str = dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+deat = pytz.timezone('Africa/Lagos')
+time_wat = datetime.now(deat)
+dt_str = time_wat.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
         "slack_name" : "JealousAide",
-        "current_day" : dt.strftime('%A'),
+        "current_day" : time_wat.strftime('%A'),
         "utc_time" : dt_str,
         "track": "backend",
         "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
