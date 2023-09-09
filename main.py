@@ -5,8 +5,8 @@ from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
 
-deat = pytz.timezone('utc')
-time_wat = datetime.now(deat)
+
+time_wat = datetime.now()
 dt_str = time_wat.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
