@@ -11,7 +11,7 @@ time_wat = datetime.utcnow()
 interns = {
         "slack_name" : "JealousAide",
         "current_day" : time_wat.strftime('%A'),
-        "utc_time" : time_wat.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "utc_time" : time_wat.strftime('%Y-%m-%dT%H:%M:%S') + "Z",
         "track": "backend",
         "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
         "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
