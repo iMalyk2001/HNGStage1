@@ -5,7 +5,7 @@ from json import JSONEncoder
 from http import HTTPStatus
 app = FastAPI()
 
-deat = pytz.timezone('Europe/Paris')
+deat = pytz.timezone('Africa/Lagos')
 time_wat = datetime.now(deat)
 dt_str = time_wat.strftime('%Y-%m-%dT%H:%M:%SZ')
 
