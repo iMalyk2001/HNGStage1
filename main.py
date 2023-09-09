@@ -7,12 +7,11 @@ app = FastAPI()
 
 
 time_wat = datetime.utcnow()
-dt_str = time_wat.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
         "slack_name" : "JealousAide",
         "current_day" : time_wat.strftime('%A'),
-        "utc_time" : dt_str,
+        "utc_time" : time_wat.strftime('%Y-%m-%dT%H:%M:%SZ'),
         "track": "backend",
         "github_file_url":"https://github.com/iMalyk2001/HNGStage1/blob/main/main.py",
         "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
