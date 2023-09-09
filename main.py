@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from datetime import datetime, timezone
 import datetime
 from json import JSONEncoder
 from http import HTTPStatus
