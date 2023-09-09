@@ -6,7 +6,7 @@ from http import HTTPStatus
 app = FastAPI()
 
 
-time_wat = datetime.now()
+time_wat = datetime.utcnow()
 dt_str = time_wat.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 interns = {
