@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import datetime
 from http import HTTPStatus
+import json
 app = FastAPI()
 
 
@@ -16,9 +17,9 @@ interns = {
         "status_code": HTTPStatus.OK.value
     }
 
-
+json_object = json.dumps(interns)
 
 
 @app.get("/api", status_code= 200)
 async def intern_ship(slack_name:str="JealousAide", track:str="backend"):
-    return interns
+    return json_object
