@@ -7,7 +7,12 @@ app = FastAPI()
 
 
 current_day= datetime.datetime.now()
-interns = {
+ 
+    
+
+@app.get("/api", status_code= 200)
+async def intern_ship(slack_name:str="JealousAide", track:str="backend"):
+    return {
         "slack_name" : "JealousAide",
         "current_day" : current_day.strftime('%A'),
         "utc_time" : datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
@@ -16,10 +21,3 @@ interns = {
         "github_repo_url":"https://github.com/iMalyk2001/HNGStage1",
         "status_code": HTTPStatus.OK.value
     }
-
-
-
-
-@app.get("/api", status_code= 200)
-async def intern_ship(slack_name:str="JealousAide", track:str="backend"):
-    return interns
